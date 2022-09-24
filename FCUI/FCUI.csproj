@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>true</CodeAnalysisFailOnMissingRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>true</CodeAnalysisFailOnMissingRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F51D6E9F-2C9E-4E14-B29E-EA663775B02E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FCUI</RootNamespace>
+    <AssemblyName>FCUI</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Axis.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="UCBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCBase.Designer.cs">
+      <DependentUpon>UCBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCTAxis.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCTAxis.Designer.cs">
+      <DependentUpon>UCTAxis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTest.Designer.cs">
+      <DependentUpon>frmTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlcAlarm.cs" />
+    <Compile Include="PlcRunTimeAlarm.cs" />
+    <Compile Include="UCAlertControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCAlertControl.Designer.cs">
+      <DependentUpon>UCAlertControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCAxicCalib.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCAxicCalib.Designer.cs">
+      <DependentUpon>UCAxicCalib.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCAxis.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCAxis.Designer.cs">
+      <DependentUpon>UCAxis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCAxisJog.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCAxisJog.Designer.cs">
+      <DependentUpon>UCAxisJog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCCalibrateControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCCalibrateControl.Designer.cs">
+      <DependentUpon>UCCalibrateControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCJogControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCJogControl.Designer.cs">
+      <DependentUpon>UCJogControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UCPlcAlarm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCPlcAlarm.Designer.cs">
+      <DependentUpon>UCPlcAlarm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCValueReader.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCValueReader.Designer.cs">
+      <DependentUpon>UCValueReader.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="UCBase.resx">
+      <DependentUpon>UCBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCTAxis.resx">
+      <DependentUpon>UCTAxis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTest.resx">
+      <DependentUpon>frmTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCAlertControl.resx">
+      <DependentUpon>UCAlertControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCAxicCalib.resx">
+      <DependentUpon>UCAxicCalib.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCAxis.resx">
+      <DependentUpon>UCAxis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCAxisJog.resx">
+      <DependentUpon>UCAxisJog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCCalibrateControl.resx">
+      <DependentUpon>UCCalibrateControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCJogControl.resx">
+      <DependentUpon>UCJogControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCPlcAlarm.resx">
+      <DependentUpon>UCPlcAlarm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCValueReader.resx">
+      <DependentUpon>UCValueReader.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FCPlc\FCPlc.csproj">
+      <Project>{cb31ad31-f26d-4239-af5b-bf5b2eadeba0}</Project>
+      <Name>FCPlc</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
